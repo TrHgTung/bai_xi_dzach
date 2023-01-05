@@ -20,13 +20,7 @@
     <script src="./components/shuffleDeck.js"></script>
 </head>
 <body>
-    <header class="d-flex justify-content-center py-3">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="" class="nav-link active" aria-current="page" onClick="refresh(this)">Trang Chủ</a></li>
-        <li class="nav-item"><a href="https://www.github.com/TrHgTung/bai_xi_dach_3_la" target="_blank" class="nav-link">Mã Nguồn</a></li>
-        <li class="nav-item"><a href="https://www.github.com/TrHgTung" target="_blank" class="nav-link">Tác Giả</a></li>
-      </ul>
-    </header>
+    <?php include './footerAndHeader/header.php'; ?>
     <div class="text-center mt-5">
         <h2 class="mb-3"><strong>Điểm của máy:</strong> <span id="dealer-sum"></span></h2>
         <div id="dealer-cards" class="mb-5">
@@ -45,17 +39,6 @@
     <div class="text-center mt-5">
         <input type="button" value="Chơi lại" class="btn btn-dark mb-5" onClick="refresh(this)">
     </div>
-    <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="" class="nav-link px-2 text-muted" onClick="refresh(this)">Trang Chủ</a></li>
-            <li class="nav-item"><a href="https://www.github.com/TrHgTung/bai_xi_dach_3_la" target="_blank" class="nav-link px-2 text-muted">Mã Nguồn</a></li>
-            <li class="nav-item"><a href="https://www.github.com/TrHgTung" target="_blank" class="nav-link px-2 text-muted">Tác Giả</a></li>
-        </ul>
-        <div class="text-center">
-            <a href="https://www.youtube.com/@NotAProYT" target="_blank" class="nav-link text-center text-muted">&copy; Youtube</a>
-            <a href="https://www.facebook.com/nguyentuanhung12345" target="_blank" class="nav-link text-center text-muted">&copy; Facebook</a>
-        </div>
-    </footer>
-
+    <?php include './footerAndHeader/footer.php'; ?>
 </body>
 </html>
