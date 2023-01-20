@@ -19,7 +19,7 @@ function startGame() {
         yourAceCount += checkAce(card);
         document.getElementById("your-cards").append(cardImg);
     }
-
+    // lay button
     document.getElementById("hit").addEventListener("click", hit);
     document.getElementById("stay").addEventListener("click", stay);
 }

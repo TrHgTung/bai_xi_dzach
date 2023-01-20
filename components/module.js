@@ -7,7 +7,7 @@ var yourAceCount = 0;
 var hidden;
 var deck;
 
-var canHit = true; //allows the player (you) to draw while yourSum <= 21
+var canHit = true; // hitAndStay.js (check quac hay chua)
 
 window.onload = function () {
     buildDeck();
