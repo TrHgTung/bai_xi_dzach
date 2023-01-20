@@ -1,0 +1,1 @@
+hình ảnh tui chôm, mà quên cmn nguồn rồi
