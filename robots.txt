@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /web/check.html
+Disallow: /components/
+Disallow: /assets/
+
+Sitemap: https://bai-xi-dzach.vercel.app/sitemap.xml

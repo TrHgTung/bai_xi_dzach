@@ -16,6 +16,18 @@ window.onload = function () {
 }
 
 function refresh() {
-    window.alert("Xác nhận chơi lại? Nhấn OK để tải ván mới")
-    window.location.reload("Refresh");
+    Swal.fire({
+        title: 'Xác nhận chơi lại?',
+        text: "Hệ thống sẽ tải lại ván mới cho bạn!",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Đồng ý',
+        cancelButtonText: 'Hủy bỏ'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.reload();
+        }
+    });
 }

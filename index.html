@@ -5,9 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dằn dơ làm chó nhen</title>
+    <title>Bài Xì Dách Ngày Tết - Game Xì Dách Online Vui Nhộn 2026</title>
+    <meta name="description"
+        content="Chơi game Bài Xì Dách ngày Tết cực kỳ hấp dẫn. Thử vận may đầu năm, dằn dơ hay kéo thêm? Giao diện đẹp, dễ chơi, mang đậm không khí Tết Việt Nam!">
+    <meta name="keywords"
+        content="Bài xì dách ngày Tết, xì dách online, game bài Tết, chơi xì dách, blackjack vietnam, game tết 2026">
+    <meta name="author" content="TrHgTung">
+
+    <!-- Open Graph / Meta cho mạng xã hội -->
+    <meta property="og:title" content="Bài Xì Dách Ngày Tết - Thử Vận May Đầu Năm">
+    <meta property="og:description" content="Game bài xì dách truyền thống ngày Tết. Chơi ngay để xem vận may của bạn!">
+    <meta property="og:image" content="./assets/index-bg.jpg">
+    <meta property="og:url" content="https://bai-xi-dzach.vercel.app/">
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://bai-xi-dzach.vercel.app/" />
     <link rel="stylesheet" href="./style/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="icon" href="./assets/2-chuon.png" sizes="192x192" />
+    <!-- SweetAlert2 -->
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="./components/startGame.js"></script>
     <script src="./components/module.js"></script>
     <script src="./components/buildDeck.js"></script>
@@ -15,52 +34,71 @@
     <script src="./components/hitAndStay.js"></script>
     <script src="./components/checkAndReduceAce.js"></script>
     <script src="./components/shuffleDeck.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header class="d-flex justify-content-center py-3">
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="" class="nav-link active" aria-current="page" onClick="refresh(this)">Trang
+            <li class="nav-item"><a href="https://bai-xi-dzach.vercel.app/" class="nav-link active" aria-current="page"
+                    onClick="refresh(this)">Trang
                     Chủ</a></li>
-            <li class="nav-item"><a href="https://www.github.com/TrHgTung/bai_xi_dzach" target="_blank"
-                    class="nav-link">Mã Nguồn</a></li>
-            <li class="nav-item"><a href="https://www.github.com/TrHgTung" target="_blank" class="nav-link">Tác Giả</a>
+            <li class="nav-item"><a href="https://www.github.com/TrHgTung/bai_xi_dzach" target="_blank" class="nav-link"
+                    rel="nofollow sponsored">Mã Nguồn</a></li>
+            <li class="nav-item"><a href="https://hoang-tung-site.vercel.app/" rel="sponsored" target="_blank"
+                    class="nav-link">Tác
+                    Giả</a>
             </li>
         </ul>
     </header>
-    <div class="text-center mt-5">
-        <h2 class="mb-3"><strong>Điểm của máy:</strong> <span id="dealer-sum"></span></h2>
-        <div id="dealer-cards" class="mb-5">
-            <img id="hidden" src="./assets/mat-sau.png">
+    <main>
+        <div class="text-center mt-5">
+            <input type="button" value="Khởi tạo ván mới" class="btn btn-dark mb-3" onClick="refresh(this)">
+            <div class="mb-3 mt-4">Tổng điểm kinh nghiệm của bạn:
+                <script>
+                    var showPoint = Number(localStorage.getItem("your_point")) || 0;
+                    document.write(showPoint);
+                </script>
+            </div>
         </div>
-        <h2 class="mb-3"><strong>Điểm của bạn:</strong> <span id="your-sum"></span></h2>
-        <div id="your-cards"></div><br>
-    </div>
-    <div class="text-center mt-5 w-100">
-        <input type="button" value="Kéo thêm 1 lá" class="btn btn-primary btn-lg w-50" id="hit">
-        <input type="submit" value="Dằn (chốt ván)" class="btn btn-danger btn-lg w-50 mt-5" id="stay">
-    </div>
-    <div class="text-center mt-5">
-        <h3 id="results"></h3>
-        <h3 id="results2"></h3>
-    </div>
-    <div class="text-center mt-5">
-        <input type="button" value="Chơi lại" class="btn btn-dark mb-5" onClick="refresh(this)">
-    </div>
+        <div class="text-center mt-3">
+            <h2 class="mb-3"><strong>Điểm của máy:</strong> <span id="dealer-sum"></span></h2>
+            <div id="dealer-cards" class="mb-5">
+                <img id="hidden" src="./assets/mat-sau.png">
+            </div>
+            <h2 class="mb-3"><strong>Điểm của bạn:</strong> <span id="your-sum"></span></h2>
+            <div id="your-cards"></div><br>
+        </div>
+        <div class="text-center mt-5 w-100">
+            <input type="button" value="Kéo thêm 1 lá" class="btn btn-primary btn-lg w-50" id="hit">
+            <input type="submit" value="Dằn (chốt ván)" class="btn btn-danger btn-lg w-50 mt-5" id="stay">
+        </div>
+        <div class="text-center mt-5">
+            <h3 id="results"></h3>
+            <h3 id="results2"></h3>
+        </div>
+        <div class="text-center mt-5">
+            <input type="button" value="Chơi lại" class="btn btn-dark mb-5" onClick="refresh(this)">
+        </div>
+    </main>
+
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="" class="nav-link px-2 text-muted" onClick="refresh(this)">Trang Chủ</a></li>
+            <li class="nav-item"><a href="/" class="nav-link px-2 text-muted" onClick="refresh(this)">Trang Chủ</a></li>
             <li class="nav-item"><a href="https://www.github.com/TrHgTung/bai_xi_dzach" target="_blank"
-                    class="nav-link px-2 text-muted">Mã Nguồn</a></li>
-            <li class="nav-item"><a href="https://www.github.com/TrHgTung" target="_blank"
-                    class="nav-link px-2 text-muted">Tác Giả</a></li>
+                    class="nav-link px-2 text-muted" rel="nofollow sponsored">Mã Nguồn</a></li>
+            <li class="nav-item"><a href="https://hoang-tung-site.vercel.app/" target="_blank"
+                    class="nav-link px-2 text-muted" rel="sponsored">Tác Giả</a></li>
         </ul>
         <div class="text-center">
-            <a href="https://www.youtube.com/@NotAProYT" target="_blank" class="nav-link text-center text-muted">&copy;
+            <a href="https://www.youtube.com/@NotAProYT" rel="nofollow sponsored" target="_blank"
+                class="nav-link text-center text-muted">&copy;
                 Youtube</a>
-            <a href="https://www.facebook.com/nguyentuanhung12345" target="_blank"
-                class="nav-link text-center text-muted">&copy; Facebook</a>
+            <a href="https://hoang-tung-site.vercel.app/" rel="sponsored" target="_blank"
+                class="nav-link text-center text-muted">&copy;
+                Profile</a>
         </div>
     </footer>
 </body>
