@@ -1,3 +1,12 @@
+function triggerFirework() {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#ff0000', '#ffd700', '#ffffff'] // Red, Gold, White for Tết theme
+    });
+}
+
 function hit() {
     if (!canHit) {
         alert("Đã quắc! Không thể rút thêm nữa, hãy xác nhận dằn");
@@ -38,6 +47,7 @@ function stay() {
     }
     else if (dealerSum > 21) {
         message = `Bạn Đã Thắng! ${suggestText}`;
+        triggerFirework();
         // lưu điểm
         checkPointLocalStorage += 3;
     }
@@ -52,6 +62,7 @@ function stay() {
         else if (yourSum > dealerSum) {
             message = `Bạn Đã Thắng! ${suggestTrolledText}`;
             message2 = ` ${suggestText}`;
+            triggerFirework();
             // lưu điểm
             checkPointLocalStorage += 3;
         }
@@ -70,6 +81,7 @@ function stay() {
     }
     else if (yourSum > dealerSum) {
         message = `Bạn Đã Thắng! ${suggestText}`;
+        triggerFirework();
         // lưu điểm
         checkPointLocalStorage += 3;
     }
