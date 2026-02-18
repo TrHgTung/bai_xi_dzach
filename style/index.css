@@ -13,6 +13,11 @@ body {
     background-size: cover;
 }
 
+.hello-world,
+.hello-world * {
+    display: none;
+}
+
 #dealer-cards img {
     height: 175px;
     width: 125px;

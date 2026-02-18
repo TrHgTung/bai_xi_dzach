@@ -6,6 +6,7 @@ function startGame() {
         let cardImg = document.createElement("img");
         let card = deck.pop();
         cardImg.src = "./assets/" + card + ".png";
+        cardImg.alt = "Đấu trường xì dzách ngày Tết";
         dealerSum += getValue(card);
         dealerAceCount += checkAce(card);
         document.getElementById("dealer-cards").append(cardImg);
@@ -15,6 +16,7 @@ function startGame() {
         let cardImg = document.createElement("img");
         let card = deck.pop();
         cardImg.src = "./assets/" + card + ".png";
+        cardImg.alt = "Đấu trường xì dzách ngày Tết";
         yourSum += getValue(card);
         yourAceCount += checkAce(card);
         document.getElementById("your-cards").append(cardImg);
