@@ -5,12 +5,12 @@ body {
     text-align: center;
     background-size: cover;
     background: url("../assets/index-bg.jpg") no-repeat center center fixed;
-    /* background-position: center center; */
     background-color: transparent;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    backdrop-filter: brightness(0.8);
 }
 
 .hello-world,
