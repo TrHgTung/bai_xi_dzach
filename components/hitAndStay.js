@@ -97,4 +97,7 @@ function stay() {
 
     // Lưu điểm vào localStorage
     localStorage.setItem("your_point", checkPointLocalStorage);
+    // Ẩn nút Kéo thêm 1 lá và nút Dằn
+    document.getElementById("hit").style.display = "none";
+    document.getElementById("stay").style.display = "none";
 }

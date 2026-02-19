@@ -1,1 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');body{font-family:'Montserrat',sans-serif;text-align:center;background-size:cover;background:url("../assets/index-bg.jpg") no-repeat center center fixed;background-color:transparent;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;backdrop-filter:brightness(.8)}.hello-world,.hello-world *{display:none}#dealer-cards img{height:175px;width:125px;margin:1px}#your-cards img{height:175px;width:125px;margin:1px}#hit{width:100px;height:50px;font-size:20px}#stay{width:100px;height:50px;font-size:20px}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-size: cover;
+    background: url("../assets/index-bg.jpg") no-repeat center center fixed;
+    background-color: transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    backdrop-filter: brightness(.9)
+}
+
+.hello-world,
+.hello-world * {
+    display: none
+}
+
+#dealer-cards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px
+}
+
+#your-cards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px
+}
+
+#hit {
+    width: 100px;
+    height: 50px;
+    font-size: 20px
+}
+
+#stay {
+    width: 100px;
+    height: 50px;
+    font-size: 20px
+}
+
+#btn-sticky-bottom,
+.btn-sticky-bottom-right {
+    position: sticky !important;
+    top: 20px;
+    align-items: center;
+    z-index: 1000;
+
+    display: flex;
+    margin: 0 5vw 0 auto;
+}
